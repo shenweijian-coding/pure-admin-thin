@@ -19,3 +19,18 @@
     @apply dark:text-white dark:hover:!bg-[#242424];
   }
 }
+.bg-white{
+  background-color: #fff;
+}
+
+.padding-lr-m{
+  padding: 0 10px 0 10px;
+}
+
+.padding-tb-m{
+  padding: 10px 0 10px 0;
+}
+
+.padding-l{
+  padding: 20px;
+}

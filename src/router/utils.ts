@@ -197,11 +197,11 @@ function initRouter() {
       });
     } else {
       return new Promise(resolve => {
-        getAsyncRoutes().then(({ data }) => {
-          handleAsyncRoutes(data);
-          storageSession.setItem(key, data);
-          resolve(router);
-        });
+        // getAsyncRoutes().then(({ data }) => {
+        handleAsyncRoutes([]);
+        //   storageSession.setItem(key, data);
+        resolve(router);
+        // });
       });
     }
   } else {

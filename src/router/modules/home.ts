@@ -6,7 +6,7 @@ export default {
   component: Layout,
   redirect: "/welcome",
   meta: {
-    title: "首页",
+    title: "管理后台",
     rank: 0
   },
   children: [
@@ -16,6 +16,22 @@ export default {
       component: () => import("@/views/welcome/index.vue"),
       meta: {
         title: "首页"
+      }
+    },
+    {
+      path: "/code",
+      name: "code",
+      component: () => import("@/views/code/index.vue"),
+      meta: {
+        title: "卡密生成"
+      }
+    },
+    {
+      path: "/user",
+      name: "user",
+      component: () => import("@/views/code/index.vue"),
+      meta: {
+        title: "用户中心"
       }
     }
   ]

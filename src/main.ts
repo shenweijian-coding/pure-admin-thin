@@ -5,12 +5,7 @@ import ElementPlus from "element-plus";
 import { getServerConfig } from "./config";
 import { createApp, Directive } from "vue";
 import { MotionPlugin } from "@vueuse/motion";
-// import { useEcharts } from "@/plugins/echarts";
-// import { useTable } from "@/plugins/vxe-table";
 import { injectResponsiveStorage } from "@/utils/responsive";
-
-// import Table from "@pureadmin/table";
-// import PureDescriptions from "@pureadmin/descriptions";
 
 // 引入重置样式
 import "./style/reset.scss";
@@ -40,8 +35,8 @@ app.component("IconifyIconOnline", IconifyIconOnline);
 app.component("FontIcon", FontIcon);
 
 // 全局注册按钮级别权限组件
-import { Auth } from "@/components/ReAuth";
-app.component("Auth", Auth);
+// import { Auth } from "@/components/ReAuth";
+// app.component("Auth", Auth);
 
 getServerConfig(app).then(async config => {
   app.use(router);
@@ -49,9 +44,5 @@ getServerConfig(app).then(async config => {
   injectResponsiveStorage(app, config);
   setupStore(app);
   app.use(MotionPlugin).use(ElementPlus);
-  // .use(useEcharts);
-  // .use(Table);
-  // .use(PureDescriptions);
-  // .use(useTable);
   app.mount("#app");
 });
